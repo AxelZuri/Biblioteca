@@ -15,6 +15,7 @@ public class Libro {
     
     public Libro(String titulo, String autor, boolean disponible){
         this.id = contadorID;
+        contadorID ++;
         this.titulo = titulo;
         this.autor = autor;
         this.disponible = disponible;

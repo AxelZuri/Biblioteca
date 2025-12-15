@@ -5,11 +5,15 @@ package Clases;
  * @author Axel Zuri
  */
 public class Usuario {
+    
+    private static int contadorId = 1;
+    
     private int id;
     private String nombre;
     
-    public Usuario(int id, String nombre){
-        this.id = id;
+    public Usuario(String nombre){
+        this.id = contadorId;
+        contadorId ++;
         this.nombre = nombre;
     }
 
@@ -30,7 +34,9 @@ public class Usuario {
     }
     
     public void mostrarUsuario(){
+        
         System.out.println("ID: "+id);
         System.out.println("Nombre: "+nombre);
+        
     }
 }

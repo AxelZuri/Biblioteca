@@ -8,8 +8,8 @@ public class UsuarioPremium extends Usuario{
     
     private boolean membresiaActiva;
     
-    public UsuarioPremium(int id, String nombre, boolean membresiaActiva){
-        super(id, nombre);
+    public UsuarioPremium(String nombre, boolean membresiaActiva){
+        super(nombre);
         this.membresiaActiva = membresiaActiva;
     }
 

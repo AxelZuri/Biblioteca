@@ -35,6 +35,25 @@ public class Biblioteca {
         }
     }
     
+    public void mostrarUsuario(){
+        if(usuarios.isEmpty()){
+            System.out.println("No hay usuarios registrados");
+        }else {
+            for (Usuario usuario: usuarios){
+                usuario.mostrarUsuario();
+                
+                if(usuario instanceof UsuarioPremium){
+                    UsuarioPremium up = (UsuarioPremium) usuario;
+                    up.mostrarTipo();
+                } else {
+                    System.out.println("Usuario Normal");
+                }
+                
+                System.out.println("-------------------");
+            }
+        }
+    }
+    
     public void prestarLibro(int idLibro){
         Libro libro = buscarLibroPorId(idLibro);
         if(libro == null){
