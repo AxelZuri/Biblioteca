@@ -6,13 +6,15 @@ package Clases;
  */
 public class Libro {
     
+    private static int contadorID = 1;
+    
     private int id;
     private String titulo;
     private String autor;
     private boolean disponible;
     
-    public Libro(int id, String titulo, String autor, boolean disponible){
-        this.id = id;
+    public Libro(String titulo, String autor, boolean disponible){
+        this.id = contadorID;
         this.titulo = titulo;
         this.autor = autor;
         this.disponible = disponible;
